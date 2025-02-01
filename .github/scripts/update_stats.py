@@ -130,7 +130,7 @@ def update_readme(stats):
         file.write(content)
 
 if __name__ == "__main__":
-    url = 'https://blog.csdn.net/m0_53347750?type=blog'
+    url = 'https://blog.csdn.net/m0_53347750'
     stats = get_csdn_stats(url)
     print(f"访问量: {stats['views']}")
     print(f"文章数: {stats['posts']}")
