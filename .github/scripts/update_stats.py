@@ -109,16 +109,13 @@ def update_readme(stats):
     # 定义替换模式和对应的完整URL格式
     replacements = {
         'views': (
-            r'badge/My%20Blog%20Views-\d+-blue\?style=social',
-            f'badge/My%20Blog%20Views-{stats["views"]}-blue?style=social'
+            r'Total%20Views-{stats["views"]}-blue'
         ),
         'posts': (
-            r'badge/Posts-\d+-green\?style=social',
-            f'badge/Posts-{stats["posts"]}-green?style=social'
+            r'Original%20Posts-{stats["posts"]}-green'
         ),
         'followers': (
-            r'badge/Followers-\d+-orange\?style=social',
-            f'badge/Followers-{stats["followers"]}-orange?style=social'
+            r'Followers-{stats["followers"]}-orange'
         )
     }
     
