@@ -1,6 +1,7 @@
 '''
 Author: SheathedSharp z404878860@163.com
 Date: 2024-11-09 13:13:34
+Updated By HYY: 2025.2.1  14:24
 '''
 import os
 import re
@@ -105,20 +106,22 @@ def get_csdn_stats(url):
 def update_readme(stats):
     with open('README.md', 'r', encoding='utf-8') as file:
         content = file.read()
+        print(content)
+        print(666)
 
     # 定义替换模式和对应的完整URL格式
     replacements = {
         'views': (
-            r'badge/Total%20Views-\d+-blue&#34;',
-            f'badge/Total%20Views-{stats["views"]}-blue&#34;'
+            r'badge/Total%20Views-\d+-blue',
+            f'badge/Total%20Views-{stats["views"]}-blue'
         ),
         'posts': (
-            r'badge/Original%20Posts-\d+-green&#34;',
-            f'badge/Original%20Posts-{stats["posts"]}-green&#34;'
+            r'badge/Original%20Posts-\d+-green',
+            f'badge/Original%20Posts-{stats["posts"]}-green'
         ),
         'followers': (
-            r'badge/Followers-\d+-orange&#34;',
-            f'badge/Followers-{stats["followers"]}-orange&#34;'
+            r'badge/Followers-\d+-orange',
+            f'badge/Followers-{stats["followers"]}-orange'
         )
     }
 
@@ -128,6 +131,7 @@ def update_readme(stats):
 
     with open('README.md', 'w', encoding='utf-8') as file:
         file.write(content)
+        print(666)
 
 if __name__ == "__main__":
     url = 'https://blog.csdn.net/m0_53347750'
